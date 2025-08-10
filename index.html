@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Click Image to Play Audio</title>
+<style>
+  body {
+    text-align: center;
+    background-color: #fffafc;
+    font-family: sans-serif;
+  }
+  img {
+    cursor: pointer;
+    max-width: 300px;
+  }
+</style>
+</head>
+<body>
+
+<h2>Click the image to play audio</h2>
+
+<img src="YOUR_IMAGE_URL" alt="Click me" onclick="document.getElementById('player').play();">
+
+<audio id="player" src="YOUR_AUDIO_URL"></audio>
+
+</body>
+</html>
