@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Click Image to Play Audio</title>
+<title>Click Image to Play SoundCloud Playlist</title>
 <style>
   body {
     text-align: center;
@@ -11,16 +11,29 @@
   img {
     cursor: pointer;
     max-width: 300px;
+    transition: transform 0.2s ease;
+  }
+  img:hover {
+    transform: scale(1.05);
+  }
+  #player {
+    display: none;
+    margin-top: 20px;
   }
 </style>
 </head>
 <body>
 
-<h2>Click the image to play audio</h2>
+<h2>Click the image to play my playlist</h2>
 
-<img src="YOUR_IMAGE_URL" alt="Click me" onclick="document.getElementById('player').play();">
+<img src="https://github.com/defnotnev/audio-click/blob/main/widget.png"
+     alt="Click me"
+     onclick="document.getElementById('player').style.display='block';">
 
-<audio id="player" src="YOUR_AUDIO_URL"></audio>
+<div id="player">
+  <!-- Paste your SoundCloud iframe embed code below -->
+  <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/2061524061%3Fsecret_token%3Ds-xEER6hoYZry&color=%23e1cbde&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/nevaeh-bradley-859704769" title="ㅤ" target="_blank" style="color: #cccccc; text-decoration: none;">ㅤ</a> · <a href="https://soundcloud.com/nevaeh-bradley-859704769/sets/notion-playlist/s-xEER6hoYZry" title="ㅤ" target="_blank" style="color: #cccccc; text-decoration: none;">ㅤ</a></div>
+</div>
 
 </body>
 </html>
